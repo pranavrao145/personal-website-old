@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<img src="{{ url_for('static', filename='images/background.jpg') }}" class="background-img">
+
+<div class="container pt-100">
+    <div id="terminal">
+        <h1>
+            
+        </h1>
+    </div>
+</div>
+
+<div class="jumbotron bg-dark text-light br-0 mb-0">
+    <h1 class="display-4">Projects</h1>
+    <p class="lead">As a programmer, I create projects for a variety of reasons.</p>
+    <hr class="my-4">
+    <p>Click on the button below to check them out!</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('projects') }}" role="button">View Projects</a>
+</div>
+
+<!-- Implement parallax and revise bg images (try to move online si puedo) -->
+
+{% endblock %}
