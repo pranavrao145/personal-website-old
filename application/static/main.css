@@ -1,7 +1,6 @@
 body, html {
 	width: 100%;
 	height: 100%;
-	font-family: 'Ubuntu', sans-serif !important;
 }
 
 
@@ -18,22 +17,22 @@ body, html {
 }
 
 
-.parallax {
-  /* The image used */
-  /* Set a specific height */
-  height: 400px;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.parallax {
+
+	height: 300px;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .background-img {
 	z-index: -5 !important;
 	position: fixed;
-	opacity: 1.0;
+	opacity: 0.6;
 	height: 100% !important;
 	width: 100%;
 }
@@ -53,4 +52,8 @@ body, html {
 
 .pt-100 {
 	padding-top: 100px;
+}
+
+.jumbotron {
+	margin-bottom: 0 !important;
 }
