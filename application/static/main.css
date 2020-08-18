@@ -38,8 +38,8 @@ body, html {
 }
 
 .content-section {
+	background-color: white;
     padding: 35px 20px;
-	margin-top: 20px;
   }
 
 .w-100 {
