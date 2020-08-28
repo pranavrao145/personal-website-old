@@ -1,19 +1,7 @@
-from flask import render_template, url_for
-from application import app
+from . import app
+from flask import url_for, render_template
 
 @app.route('/')
 @app.route('/home')
 def home():
-	return render_template('home.html', title="Home")
-
-@app.route('/about')
-def about():
-	return render_template('about.html', title="About")
-
-@app.route('/contact')
-def contact():
-	return render_template('contact.html', title="Contact Me")
-
-@app.route('/projects')
-def projects():
-	return render_template('projects.html', title="Projects")
+    return render_template("home.html", title="Home")

@@ -1,23 +1,27 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
-<img src="https://cdn.pixabay.com/photo/2016/01/19/18/00/city-1150026_1280.jpg" class="background-img">
-
-<div class="jumbotron">
-    <h1 class="display-4">Hey there!</h1>
-    <p class="lead">My name is Pranav!</p>
-    <hr class="my-4">
-    <p>Welcome to my website! Check out some of my projects below!</p>
-</div>
+<section class="hero is-light is-large is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">
+                My name is Pranav Rao.
+                </p>
+                <h1 class="subtitle is-3">
+                    Welcome to my website!
+                </h1>
+        </div>
+    </div>
+</section>
 
 <div class="parallax"
-    style="background-image: url(https://cdn.pixabay.com/photo/2016/01/19/18/00/city-1150026_1280.jpg);"></div>
-
-<div class="content-section text-center">
-    <h1 class="text-center display-4">Projects</h1>
-    <a href="{{ url_for('projects') }}" class="btn btn-primary mt-4">View all Projects</a>
+    style="background-image:url(https://images.unsplash.com/photo-1559437317-ef1af95a87b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);">
 </div>
 
-
+<section class="section has-background-dark">
+    <div class="container" style="font-family: 'Ubuntu', sans-serif;">
+        <h1 class="title has-text-light has-text-centered is-2">About this Page</h1>
+        <p class="content has-text-light has-text-centered is-size-5">Hello, I'm Pranav! I love coding and programming. This is my personal website and portfolio, showcasing some of my previous projects and achievements, as well as providing an easy way get in touch with me. Scroll down to see more!</p>
+    </div>
+</section>
 {% endblock %}
