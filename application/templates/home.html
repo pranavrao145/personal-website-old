@@ -1,27 +1,115 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<section class="hero is-light is-large is-bold">
+<section class="hero is-light is-medium" id="intro">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title is-1">
-                My name is Pranav Rao.
-                </p>
-                <h1 class="subtitle is-3">
-                    Welcome to my website!
-                </h1>
+            <h1 class="title is-1" id="typewriter"></h1>
+            <h1 class="subtitle is-3 mr-2" style="display: inline-block;" id="typewriter1"></h1>
+            <br><br>
+            <p class="subtitle is-4" id="typewriter2"></p>
+        </div>
+    </div>
+</section>
+
+
+<div class="parallax"
+    style="background-image:url(https://cdn.pixabay.com/photo/2015/03/26/10/04/new-york-690868_1280.jpg);">
+</div>
+
+<section class="section has-background-dark">
+    <div class="container" style="font-family: 'Ubuntu', sans-serif;">
+        <h1 class="title has-text-light has-text-centered is-2">Projects</h1>
+
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Project 1</p>
+                                <p class="subtitle is-6">Date</p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            Project description here.
+                            <br>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item mr-1 button is-link">View Project</a>
+                            <a href="#" class="card-footer-item ml-1 button is-link">View Github Repo</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Project 2</p>
+                                <p class="subtitle is-6">Date</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            Project description here.
+                            <br>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item mr-1 button is-link">View Project</a>
+                            <a href="#" class="card-footer-item ml-1 button is-link">View Github Repo</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Project 3</p>
+                                <p class="subtitle is-6">Date</p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            Project description here.
+                            <br>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item mr-1 button is-link">View Project</a>
+                            <a href="#" class="card-footer-item ml-1 button is-link">View Github Repo</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <div class="parallax"
-    style="background-image:url(https://images.unsplash.com/photo-1559437317-ef1af95a87b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);">
-</div>
+    style="background-image: url(https://cdn.pixabay.com/photo/2017/08/31/05/36/new-york-2699520_1280.jpg);"></div>
 
-<section class="section has-background-dark">
+<section class="section">
     <div class="container" style="font-family: 'Ubuntu', sans-serif;">
-        <h1 class="title has-text-light has-text-centered is-2">About this Page</h1>
-        <p class="content has-text-light has-text-centered is-size-5">Hello, I'm Pranav! I love coding and programming. This is my personal website and portfolio, showcasing some of my previous projects and achievements, as well as providing an easy way get in touch with me. Scroll down to see more!</p>
+        <h1 class="title has-text-dark has-text-centered is-2">Contact Me</h1>
     </div>
 </section>
+
 {% endblock %}
