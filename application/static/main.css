@@ -34,5 +34,9 @@ html, body {
 }
 
 .card {
-  height: 600px;
+  height: 100% !important;
+}
+
+.card-footer {
+  margin-top: auto !important;
 }
