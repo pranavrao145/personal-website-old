@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 flask = "*"
+flask-mail = "*"
+wtforms = "*"
+flask-wtf = "*"
+email-validator = "*"
 
 [dev-packages]
 

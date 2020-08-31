@@ -37,23 +37,13 @@ function typeWriter15() {
   }
 }
 
-var i2 = 0;
-var txt2 = 'Scroll down to see some of my projects and achievements or to get in touch!'; /* The text */
-
-function typeWriter2() {
-  if (i2 < txt2.length) {
-    document.getElementById("typewriter2").innerHTML += txt2.charAt(i2);
-    i2++;
-    setTimeout(typeWriter2, speed);
-  }
-}
-
 function onload() {
-    typeWriter();
-    speed=70;
-    setTimeout(typeWriter1, 2500);
-    setTimeout(addBoldText);
-    setTimeout(typeWriter15, 6200);
-    setTimeout(typeWriter2, 9500);
-    
+  typeWriter();
+  speed = 70;
+  setTimeout(typeWriter1, 2500);
+  setTimeout(addBoldText);
+  setTimeout(typeWriter15, 6200);
+  setTimeout(function () {
+    $('#scroll-prompt').fadeIn(1500);
+  }, 8000);
 }
