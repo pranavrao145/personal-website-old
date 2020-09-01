@@ -24,12 +24,12 @@
 </div>
 
 <section class="section has-background-dark" id="projects">
-	<div class="container" style="font-family: 'Ubuntu', sans-serif;">
+	<div class="container">
 		<h1 class="title has-text-light has-text-centered is-2">Projects</h1>
 
 		<div class="columns">
 			<div class="column">
-				<div class="card">
+				<div class="card is-fullheight">
 					<div class="card-image">
 						<figure class="image is-4by3">
 							<img src="{{ url_for('static', filename='images/MentorsPlatform.png') }}">
@@ -45,7 +45,7 @@
 
 						<div class="content">
 							A web app that allows for easy mentor and teacher class reports and tracking management, as well as salary management.
-							<br>
+							
 						</div>
 						<footer class="card-footer">
 							<a href="https://mentors.codercookies.com/" target="_blank" class="card-footer-item mr-1 button is-link">View Project</a>
@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div class="column">
-				<div class="card">
+				<div class="card is-fullheight">
 					<div class="card-image">
 						<figure class="image is-4by3">
 							<img src="{{ url_for('static', filename='images/MasterProfile.png') }}">
@@ -70,7 +70,7 @@
 						</div>
 						<div class="content">
 							MasterProfile is a simple yet powerful web application designed to revolutionize the way employers get information about potential candidates.
-							<br>
+							
 						</div>
 						<footer class="card-footer">
 							<a href="https://masterprofile.herokuapp.com/" target="_blank" class="card-footer-item mr-1 button is-link">View Project</a>
@@ -80,7 +80,7 @@
 				</div>
 			</div>
 			<div class="column">
-				<div class="card">
+				<div class="card is-fullheight">
 					<div class="card-image">
 						<figure class="image is-4by3">
 							<img src="{{ url_for('static', filename='images/DoctorHelp.png') }}">
@@ -95,8 +95,8 @@
 						</div>
 
 						<div class="content">
-							A platform that allows patients to anonymously contact doctors and get their questions answered.<br>
-							<br>
+							A platform that allows patients to anonymously contact doctors and get their questions answered.
+							
 						</div>
 						<footer class="card-footer">
 							<a href="http://doctorhelp.tech/" target="_blank" class="card-footer-item mr-1 button is-link">View Project</a>
@@ -114,7 +114,7 @@
 </div>
 
 <section class="section has-background-light" id="contact">
-	<div class="container" style="font-family: 'Ubuntu', sans-serif;">
+	<div class="container">
 		<h1 class="title has-text-dark has-text-centered is-2">Contact Me</h1>
 		<form method="POST" action="">
 			{{ form.hidden_tag() }}
