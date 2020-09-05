@@ -21,3 +21,8 @@ Message:
         flash("Your message has been sent successfully.", "is-success")
         return redirect(url_for('home'))
     return render_template("home.html", title="Home", form=form)
+
+
+@app.route('/all_projects')
+def all_projects():
+    return render_template("all_projects.html", title="All Projects ")
