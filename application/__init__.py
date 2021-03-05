@@ -14,4 +14,4 @@ app.config["MAIL_DEFAULT_SENDER"] = os.environ.get('EMAIL_USER')
 
 mail = Mail(app)
 
-from . import routes
+from application import routes

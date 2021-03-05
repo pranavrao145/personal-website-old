@@ -2,7 +2,7 @@ from . import app, mail
 from flask_mail import Message
 from flask import url_for, render_template, redirect, flash
 from .forms import ContactMeForm
-from os import environ
+import os
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -10,7 +10,7 @@ from os import environ
 def home():
     form = ContactMeForm()
     if form.validate_on_submit():
-        msg = Message(subject="Email From Personal Website", recipients=[environ.get('EMAIL_RECIPIENT')])
+        msg = Message(subject="Email From Personal Website", recipients=[os.environ.get('EMAIL_RECIPIENT')])
         msg.body = f'''Name of sender: {form.name.data}
 Return email address: {form.email.data}
 

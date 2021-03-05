@@ -2,201 +2,112 @@
 
 {% block content %}
 
-<div class="parallax"
-	style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;" id="start">
-</div>
+    <div class="parallax"
+         style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;"
+         id="start">
+    </div>
 
 
-<section class="hero is-light is-medium" id="intro">
-	<div class="hero-body">
-		<div class="container">
-			<h1 class="title is-1" id="typewriter"></h1>
-			<h1 class="subtitle is-3 mr-2" style="display: inline-block;" id="typewriter1"></h1>
-			<br><br>
-			<p class="subtitle is-4" id="scroll-prompt">Scroll down to see some of my projects and achievements or get in touch with me!</p>
-		</div>
-	</div>
-</section>
+    <section class="hero is-light is-medium" id="intro">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1" id="typewriter"></h1>
+                <h1 class="subtitle is-3 mr-2" style="display: inline-block;" id="typewriter1"></h1>
+                <br><br>
+                <p class="subtitle is-4" id="scroll-prompt">Scroll down to see some of my projects and achievements or
+                    get in touch with me!</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="parallax"
+         style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg);">
+    </div>
 
-
-<div class="parallax"
-	style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg);">
-</div>
-
-<section class="section has-background-dark" id="projects">
-	<div class="container">
-		<h1 class="title has-text-light has-text-centered is-2">Projects</h1>
-
-		<div class="columns">
-			<div class="column">
-				<div class="card is-fullheight">
-					<div class="card-image">
-						<figure class="image is-4by3">
-							<img src="{{ url_for('static', filename='images/MentorsPlatform.png') }}">
-						</figure>
-					</div>
-					<div class="card-content">
-						<div class="media">
-							<div class="media-content">
-								<p class="title is-4">Mentors Platform</p>
-								<p class="subtitle is-6">August 2020</p>
-							</div>
-						</div>
-
-						<div class="content">
-							A web app that allows for easy mentor and teacher class reports and tracking management, as well as salary management.
-						</div>
-						<br>
-						<footer class="card-footer">
-							<a href="https://mentors.codercookies.com/" target="_blank" class="card-footer-item mr-1 button is-link">View Project</a>
-							<a href="#" class="card-footer-item ml-1 button is-link">View Github Repo</a> <!--Repo is private!!-->
-						</footer>
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card is-fullheight">
-					<div class="card-image">
-						<figure class="image is-4by3">
-							<img src="{{ url_for('static', filename='images/MasterProfile.png') }}">
-						</figure>
-					</div>
-					<div class="card-content">
-						<div class="media">
-							<div class="media-content">
-								<p class="title is-4">MasterProfile</p>
-								<p class="subtitle is-6">July 2020</p>
-							</div>
-						</div>
-						<div class="content">
-							MasterProfile is a simple yet powerful web application designed to revolutionize the way employers get information about potential candidates.
-						</div>
-						<footer class="card-footer">
-							<a href="https://masterprofile.herokuapp.com/" target="_blank" class="card-footer-item mr-1 button is-link">View Project</a>
-							<a href="#" class="card-footer-item ml-1 button is-link">View Github Repo</a>
-						</footer>
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="card is-fullheight">
-					<div class="card-image">
-						<figure class="image is-4by3">
-							<img src="{{ url_for('static', filename='images/DoctorHelp.png') }}">
-						</figure>
-					</div>
-					<div class="card-content">
-						<div class="media">
-							<div class="media-content">
-								<p class="title is-4">Doctor, Help!</p>
-								<p class="subtitle is-6">July 2020</p>
-							</div>
-						</div>
-
-						<div class="content">
-							A platform that allows patients to anonymously contact doctors and get their questions answered.
-						</div>
-						<br>
-						<footer class="card-footer">
-							<a href="http://doctorhelp.tech/" target="_blank" class="card-footer-item mr-1 button is-link">View Project</a>
-							<a href="#" class="card-footer-item ml-1 button is-link">View Github Repo</a>
-						</footer>
-					</div>
-				</div>
-			</div>
-		</div>
-		<a href="{{ url_for('all_projects') }}" class="button is-link is-fullwidth">View All Projects</a>
-	</div>
-</section>
-
-<div class="parallax"
-	style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg);">
-</div>
-
-<section class="section has-background-light" id="contact">
-	<div class="container">
-		<h1 class="title has-text-dark has-text-centered is-2">Contact Me</h1>
-		<form method="POST" action="">
-			{{ form.hidden_tag() }}
-			<fieldset>
-				<div class="field">
-					{{ form.name.label(class="label") }}
-					{% if form.name.errors %}
-					<div class="control has-icons-left">
-						{{ form.name(class="input is-danger") }}
-						<span class="icon is-small is-left">
+    <section class="section has-background-light" id="contact">
+        <div class="container">
+            <h1 class="title has-text-dark has-text-centered is-2">Contact Me</h1>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset>
+                    <div class="field">
+                        {{ form.name.label(class="label") }}
+                        {% if form.name.errors %}
+                            <div class="control has-icons-left">
+                                {{ form.name(class="input is-danger") }}
+                                <span class="icon is-small is-left">
 							<i class="fas fa-user"></i>
 						</span>
-					</div>
-					<div>
-						{% for error in form.name.errors %}
-						<span class="help is-danger">{{ error }}</span>
-						{% endfor %}
-					</div>
+                            </div>
+                            <div>
+                                {% for error in form.name.errors %}
+                                    <span class="help is-danger">{{ error }}</span>
+                                {% endfor %}
+                            </div>
 
-					{% else %}
-					<div class="control has-icons-left">
-						{{ form.name(class="input") }}
-						<span class="icon is-small is-left">
+                        {% else %}
+                            <div class="control has-icons-left">
+                                {{ form.name(class="input") }}
+                                <span class="icon is-small is-left">
 							<i class="fas fa-user"></i>
 						</span>
-					</div>
-					{% endif %}
-				</div>
-				<div class="field">
-					{{ form.email.label(class="label") }}
-					{% if form.email.errors %}
-					<div class="control has-icons-left">
-						{{ form.email(class="input is-danger") }}
-						<span class="icon is-small is-left">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="field">
+                        {{ form.email.label(class="label") }}
+                        {% if form.email.errors %}
+                            <div class="control has-icons-left">
+                                {{ form.email(class="input is-danger") }}
+                                <span class="icon is-small is-left">
 							<i class="fas fa-envelope"></i>
 						</span>
-					</div>
-					<div>
-						{% for error in form.email.errors %}
-						<span class="help is-danger">{{ error }}</span>
-						{% endfor %}
-					</div>
+                            </div>
+                            <div>
+                                {% for error in form.email.errors %}
+                                    <span class="help is-danger">{{ error }}</span>
+                                {% endfor %}
+                            </div>
 
-					{% else %}
-					<div class="control has-icons-left">
-						{{ form.email(class="input") }}
-						<span class="icon is-small is-left">
+                        {% else %}
+                            <div class="control has-icons-left">
+                                {{ form.email(class="input") }}
+                                <span class="icon is-small is-left">
 							<i class="fas fa-envelope"></i>
 						</span>
-					</div>
-					{% endif %}
-				</div>
-				<div class="field">
-					{{ form.message.label(class="label") }}
-					{% if form.message.errors %}
-					<div class="control">
-						{{ form.message(class="textarea is-danger") }}
-					</div>
-					<div>
-						{% for error in form.message.errors %}
-						<span class="help is-danger">{{ error }}</span>
-						{% endfor %}
-					</div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="field">
+                        {{ form.message.label(class="label") }}
+                        {% if form.message.errors %}
+                            <div class="control">
+                                {{ form.message(class="textarea is-danger") }}
+                            </div>
+                            <div>
+                                {% for error in form.message.errors %}
+                                    <span class="help is-danger">{{ error }}</span>
+                                {% endfor %}
+                            </div>
 
-					{% else %}
-					<div class="control">
-						{{ form.message(class="textarea") }}
-					</div>
-					{% endif %}
-				</div>
-				<div class="field">
-					<div class="control">
-						{{ form.submit(class="button is-link is-fullwidth")}}
-					</div>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-</section>
+                        {% else %}
+                            <div class="control">
+                                {{ form.message(class="textarea") }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            {{ form.submit(class="button is-link is-fullwidth") }}
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
 
-<div class="parallax"
-	style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;">
-</div>
+    <div class="parallax"
+         style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;">
+    </div>
 
 {% endblock %}
