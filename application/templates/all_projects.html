@@ -1,6 +1,122 @@
 {% extends "layout.html" %}
 
-{% include "includes/navbar.html" %}
+{% block bgimage %}
+    <img src="https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg" alt="" class="bg-image">
+{% endblock %}
 
 {% block content %}
+    <div class="container">
+        <h1 class="mt-5 title has-text-dark has-text-centered">All Projects</h1>
+        <div class="box">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="{{ url_for('static', filename="images/Fulcrum.jpg") }}"
+                             alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <h1 class="title is-4">Fulcrum</h1>
+                    <h3 class="subtitle is-5">January 2021</h3>
+                    <div class="content">
+                        <p>
+                            A custom-made Discord bot with miscellaneous but useful functionality that is hard to
+                            find in other bots.
+                        </p>
+                        <p><strong>Created using: </strong>Nodejs</p>
+                    </div>
+                </div>
+                <a href="#" class="button is-info">View Source Code</a>
+            </article>
+        </div>
+        <div class="box">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="{{ url_for('static', filename="images/You.png") }}"
+                             alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <h1 class="title is-4">You.</h1>
+                    <h3 class="subtitle is-5">January 2021</h3>
+                    <div class="content">
+                        <p>
+                            A web application that allows users document their daily lives, including thoughts, feelings
+                            and
+                            goals, all in one spot!
+                        </p>
+                        <p><strong>Created using: </strong>Python, Flask, HTML, CSS, Javascript, SQLAlchemy</p>
+                    </div>
+                </div>
+                <a href="#" class="button is-info">Visit Website</a>
+            </article>
+        </div>
+        <div class="box">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="{{ url_for('static', filename="images/MentorsPlatform.png") }}"
+                             alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <h1 class="title is-4">Mentors Platform</h1>
+                    <h3 class="subtitle is-5">August 2020</h3>
+                    <div class="content">
+                        <p>
+                            A platform that allows for easy reporting between teachers and their admins, as well as
+                            salary and attendance tracking.
+                        </p>
+                        <p><strong>Created using: </strong>Python, Flask, HTML, CSS, Javascript, SQLAlchemy</p>
+                    </div>
+                </div>
+                <a href="#" class="button is-info">Visit Website</a>
+            </article>
+        </div>
+        <div class="box">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="{{ url_for('static', filename="images/MasterProfile.png") }}"
+                             alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <h1 class="title is-4">MasterProfile</h1>
+                    <h3 class="subtitle is-5">July 2020</h3>
+                    <div class="content">
+                        <p>
+                            A simple yet powerful web application designed to revolutionize the way employers get
+                            information about potential candidates.
+                        </p>
+                        <p><strong>Created using: </strong>Python, Flask, HTML, CSS, Javascript, SQLAlchemy</p>
+                    </div>
+                </div>
+                <a href="#" class="button is-info">Visit Website</a>
+            </article>
+        </div>
+        <div class="box">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="{{ url_for('static', filename="images/MentorsPlatform.png") }}"
+                             alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <h1 class="title is-4">Doctor, Help!</h1>
+                    <h3 class="subtitle is-5">July 2020</h3>
+                    <div class="content">
+                        <p>
+                            A platform that allows patients to anonymously contact qualified doctors and get their
+                            medical questions answered.
+                        </p>
+                        <p><strong>Created using: </strong>Python, Flask, HTML, CSS, Javascript, SQLAlchemy</p>
+                    </div>
+                </div>
+                <a href="#" class="button is-info">Visit Website</a>
+            </article>
+        </div>
+    </div>
 {% endblock %}

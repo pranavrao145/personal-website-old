@@ -25,4 +25,4 @@ Message:
 
 @app.route('/all_projects')
 def all_projects():
-    return render_template("all_projects.html", title="All Projects ")
+    return render_template("all_projects.html", title="All Projects")
