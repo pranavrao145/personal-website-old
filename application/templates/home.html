@@ -32,6 +32,29 @@
                     <div class="card is-fullheight">
                         <div class="card-image">
                             <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename="images/Taskr.png") }}"
+                                     alt="Placeholder image">
+
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Taskr</p>
+                                    <p class="subtitle is-6">February 2021</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                A simple Android application for task management.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="card is-fullheight">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
                                 <img src="{{ url_for('static', filename="images/Fulcrum.jpg") }}"
                                      alt="Placeholder image">
                             </figure>
@@ -55,30 +78,6 @@
                     <div class="card is-fullheight">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="{{ url_for('static', filename="images/You.png") }}"
-                                     alt="Placeholder image">
-
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">You.</p>
-                                    <p class="subtitle is-6">January 2021</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                A web application that allows users document their daily lives, including thoughts, feelings and
-                                goals, all in one spot!
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-third">
-                    <div class="card is-fullheight">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
                                 <img src="{{ url_for('static', filename="images/MentorsPlatform.png") }}">
                             </figure>
                         </div>
@@ -91,13 +90,15 @@
                             </div>
 
                             <div class="content">
-                                A platform that allows for easy reporting between teachers and their admins, as well as salary and attendance tracking.
+                                A platform that allows for easy reporting between teachers and their admins, as well as
+                                salary and attendance tracking.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="{{ url_for('all_projects', title="All Projects") }}" class="button is-info is-fullwidth">View All Projects</a>
+            <a href="{{ url_for('all_projects', title="All Projects") }}" class="button is-info is-fullwidth">View All
+                Projects</a>
         </div>
     </section>
 

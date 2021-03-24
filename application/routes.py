@@ -1,6 +1,6 @@
 from . import app, mail
 from flask_mail import Message
-from flask import url_for, render_template, redirect, flash
+from flask import url_for, render_template, redirect, flash, current_app, send_from_directory
 from .forms import ContactMeForm
 import os
 
@@ -26,3 +26,15 @@ Message:
 @app.route('/all_projects')
 def all_projects():
     return render_template("all_projects.html", title="All Projects")
+
+
+# the download mechanism does not work as yet
+@app.route('/uploads/<path:filename>', methods=['GET', 'POST'])
+def download(filename):
+    uploads = os.path.join(current_app.root_path, app.config['UPLOAD_FOLDER'])
+    return send_from_directory(directory=uploads, filename=filename)
+
+
+@app.route('/about_me')
+def about_me():
+    return render_template("about.html")
