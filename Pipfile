@@ -10,8 +10,10 @@ wtforms = "*"
 flask-wtf = "*"
 email-validator = "*"
 gunicorn = "*"
+pynvim = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.8"
