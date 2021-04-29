@@ -2,192 +2,191 @@
 
 {% block content %}
 
-    <div class="parallax"
-         style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;"
-         id="start">
-    </div>
+<div class="parallax"
+     style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;"
+     id="start">
+</div>
 
 
-    <section class="hero is-light is-medium" id="intro">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title is-1" id="typewriter"></h1>
-                <h1 class="subtitle is-3 mr-2" style="display: inline-block;" id="typewriter1"></h1>
-                <br><br>
-                <p class="subtitle is-4" id="scroll-prompt">Scroll down to see some of my projects and achievements or
-                    get in touch with me!</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="parallax"
-         style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg);">
-    </div>
-
-    <section class="section has-background-dark" id="projects">
+<section class="hero is-light is-medium" id="intro">
+    <div class="hero-body">
         <div class="container">
-            <h1 class="title has-text-light has-text-centered is-2">Projects</h1>
-            <div class="columns">
-                <div class="column is-one-third">
-                    <div class="card is-fullheight">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="{{ url_for('static', filename="images/Blogr.png") }}">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">Blogr</p>
-                                    <p class="subtitle is-6">March 2021</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                A simple blog application where users can register, log in, view others' posts, and make and edit their own posts.
-                            </div>
-                        </div>
+            <h1 class="title is-1" id="typewriter"></h1>
+            <h1 class="subtitle is-3 mr-2" style="display: inline-block;" id="typewriter1"></h1>
+            <br><br>
+            <p class="subtitle is-4" id="scroll-prompt">Scroll down to see some of my projects and achievements or
+            get in touch with me!</p>
+        </div>
+    </div>
+</section>
+
+<div class="parallax"
+     style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg);">
+</div>
+
+<section class="section has-background-dark" id="projects">
+    <div class="container">
+        <h1 class="title has-text-light has-text-centered is-2">Projects</h1>
+        <div class="columns">
+            <div class="column is-one-third">
+                <div class="card is-fullheight">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="{{ url_for('static', filename="images/Blogr.png") }}">
+                        </figure>
                     </div>
-                </div>
-                <div class="column is-one-third">
-                    <div class="card is-fullheight">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="{{ url_for('static', filename="images/Taskr.png") }}"
-                                     alt="Placeholder image">
-
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">Taskr</p>
-                                    <p class="subtitle is-6">February 2021</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                A simple Android application for task management.
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Blogr</p>
+                                <p class="subtitle is-6">March 2021</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="column is-one-third">
-                    <div class="card is-fullheight">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="{{ url_for('static', filename="images/Fulcrum.jpg") }}"
-                                     alt="Placeholder image">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">Fulcrum</p>
-                                    <p class="subtitle is-6">January 2021</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                A custom-made Discord bot with miscellaneous but useful functionality that is hard to
-                                find in other bots.
-                            </div>
+                        <div class="content">
+                            A simple blog application where users can register, log in, view others' posts, and make and edit their own posts.
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="{{ url_for('all_projects', title="All Projects") }}" class="button is-info is-fullwidth">View All
-                Projects</a>
-        </div>
-    </section>
+            <div class="column is-one-third">
+                <div class="card is-fullheight">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="{{ url_for('static', filename="images/Taskr.png") }}"
+                                                           alt="Placeholder image">
 
-    <div class="parallax"
-         style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg);">
-    </div>
-
-    <section class="section has-background-light" id="contact">
-        <div class="container">
-            <h1 class="title has-text-dark has-text-centered is-2">Contact Me</h1>
-            <form method="POST" action="">
-                {{ form.hidden_tag() }}
-                <fieldset>
-                    <div class="field">
-                        {{ form.name.label(class="label") }}
-                        {% if form.name.errors %}
-                            <div class="control has-icons-left">
-                                {{ form.name(class="input is-danger") }}
-                                <span class="icon is-small is-left">
-							<i class="fas fa-user"></i>
-						</span>
-                            </div>
-                            <div>
-                                {% for error in form.name.errors %}
-                                    <span class="help is-danger">{{ error }}</span>
-                                {% endfor %}
-                            </div>
-
-                        {% else %}
-                            <div class="control has-icons-left">
-                                {{ form.name(class="input") }}
-                                <span class="icon is-small is-left">
-							<i class="fas fa-user"></i>
-						</span>
-                            </div>
-                        {% endif %}
+                        </figure>
                     </div>
-                    <div class="field">
-                        {{ form.email.label(class="label") }}
-                        {% if form.email.errors %}
-                            <div class="control has-icons-left">
-                                {{ form.email(class="input is-danger") }}
-                                <span class="icon is-small is-left">
-							<i class="fas fa-envelope"></i>
-						</span>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Taskr</p>
+                                <p class="subtitle is-6">February 2021</p>
                             </div>
-                            <div>
-                                {% for error in form.email.errors %}
-                                    <span class="help is-danger">{{ error }}</span>
-                                {% endfor %}
-                            </div>
+                        </div>
 
-                        {% else %}
-                            <div class="control has-icons-left">
-                                {{ form.email(class="input") }}
-                                <span class="icon is-small is-left">
-							<i class="fas fa-envelope"></i>
-						</span>
-                            </div>
-                        {% endif %}
-                    </div>
-                    <div class="field">
-                        {{ form.message.label(class="label") }}
-                        {% if form.message.errors %}
-                            <div class="control">
-                                {{ form.message(class="textarea is-danger") }}
-                            </div>
-                            <div>
-                                {% for error in form.message.errors %}
-                                    <span class="help is-danger">{{ error }}</span>
-                                {% endfor %}
-                            </div>
-
-                        {% else %}
-                            <div class="control">
-                                {{ form.message(class="textarea") }}
-                            </div>
-                        {% endif %}
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            {{ form.submit(class="button is-link is-fullwidth") }}
+                        <div class="content">
+                            A simple Android application for task management.
                         </div>
                     </div>
-                </fieldset>
-            </form>
-        </div>
-    </section>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="card is-fullheight">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="{{ url_for('static', filename="images/Fulcrum.jpg") }}"
+                                                           alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Fulcrum Prime</p>
+                                <p class="subtitle is-6">January 2021</p>
+                            </div>
+                        </div>
 
-    <div class="parallax"
-         style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;">
+                        <div class="content">
+                            Simple yet powerful Discord bot for all the features you never knew you needed on your server. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="{{ url_for('all_projects', title="All Projects") }}" class="button is-info is-fullwidth">View All
+            Projects</a>
     </div>
+</section>
+
+<div class="parallax"
+     style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg);">
+</div>
+
+<section class="section has-background-light" id="contact">
+    <div class="container">
+        <h1 class="title has-text-dark has-text-centered is-2">Contact Me</h1>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <div class="field">
+                    {{ form.name.label(class="label") }}
+                    {% if form.name.errors %}
+                    <div class="control has-icons-left">
+                        {{ form.name(class="input is-danger") }}
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <div>
+                        {% for error in form.name.errors %}
+                        <span class="help is-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                    {% else %}
+                    <div class="control has-icons-left">
+                        {{ form.name(class="input") }}
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="field">
+                    {{ form.email.label(class="label") }}
+                    {% if form.email.errors %}
+                    <div class="control has-icons-left">
+                        {{ form.email(class="input is-danger") }}
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <div>
+                        {% for error in form.email.errors %}
+                        <span class="help is-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                    {% else %}
+                    <div class="control has-icons-left">
+                        {{ form.email(class="input") }}
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="field">
+                    {{ form.message.label(class="label") }}
+                    {% if form.message.errors %}
+                    <div class="control">
+                        {{ form.message(class="textarea is-danger") }}
+                    </div>
+                    <div>
+                        {% for error in form.message.errors %}
+                        <span class="help is-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                    {% else %}
+                    <div class="control">
+                        {{ form.message(class="textarea") }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="field">
+                    <div class="control">
+                        {{ form.submit(class="button is-link is-fullwidth") }}
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+<div class="parallax"
+     style="background-image:url(https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg); height:75px;">
+</div>
 
 {% endblock %}

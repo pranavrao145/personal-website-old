@@ -35,6 +35,6 @@ def download(filename):
     return send_from_directory(directory=uploads, filename=filename)
 
 
-@app.route('/about_me')
-def about_me():
-    return render_template("about.html")
+# @app.route('/about_me')
+# def about_me():
+    # return render_template("about.html")
