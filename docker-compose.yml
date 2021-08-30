@@ -3,3 +3,6 @@ services:
     build: .
     network_mode: host
     env_file: .env
+    volumes:
+      - .:/app
+
