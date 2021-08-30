@@ -23,7 +23,7 @@ function typeWriter1() {
 }
 
 function addBoldText() {
-  $("#typewriter1").after("<strong class='subtitle is-3 has-text-weight-medium' id='typewriter15'></strong>");
+  $("#typewriter1").after("<strong class='subtitle is-3 has-text-weight-bold' id='typewriter15'></strong>");
 }
 
 var i15 = 0;
