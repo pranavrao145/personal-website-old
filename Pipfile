@@ -11,6 +11,7 @@ flask-wtf = "*"
 email-validator = "*"
 gunicorn = "*"
 pynvim = "*"
+python-dotenv = "*"
 
 [dev-packages]
 pylint = "*"
